@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORGE | Control & Evaluate borjamoskv</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="navbar">
+            <div class="logo">
+                <span class="forge-icon">⚒</span> FORGE
+            </div>
+            <div class="user-badge" id="userBadge">
+                <img src="https://github.com/borjamoskv.png" alt="Avatar" class="avatar" id="navAvatar">
+                <span id="navUsername">borjamoskv</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section: The Score -->
+            <section class="score-hero glass-panel">
+                <div class="score-header">
+                    <h2>NIVEL DE CUENTA</h2>
+                    <p>Evaluación algorítmica en tiempo real</p>
+                </div>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle-progress" id="scoreProgress"
+                              stroke-dasharray="0, 100"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                        </svg>
+                        <div class="score-value">
+                            <span id="totalScore" class="number">0</span>
+                            <span class="max-score">/ 10000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="score-tier" id="scoreTier">CALCULANDO...</div>
+            </section>
+
+            <!-- Metrics Grid -->
+            <section class="metrics-grid">
+                <div class="metric-card glass-panel" id="card-profile">
+                    <div class="metric-icon">👤</div>
+                    <div class="metric-info">
+                        <h3>Perfil y Actividad</h3>
+                        <div class="metric-points"><span id="ptsProfile">0</span> / 2000 pts</div>
+                        <div class="metric-bar"><div class="metric-fill" id="fillProfile"></div></div>
+                    </div>
+                </div>
+                <div class="metric-card glass-panel" id="card-popularity">
+                    <div class="metric-icon">⭐</div>
+                    <div class="metric-info">
+                        <h3>Popularidad</h3>
+                        <div class="metric-points"><span id="ptsPopularity">0</span> / 3000 pts</div>
+                        <div class="metric-bar"><div class="metric-fill" id="fillPopularity"></div></div>
+                    </div>
+                </div>
+                <div class="metric-card glass-panel" id="card-repos">
+                    <div class="metric-icon">📦</div>
+                    <div class="metric-info">
+                        <h3>Repositorios</h3>
+                        <div class="metric-points"><span id="ptsRepos">0</span> / 3000 pts</div>
+                        <div class="metric-bar"><div class="metric-fill" id="fillRepos"></div></div>
+                    </div>
+                </div>
+                <div class="metric-card glass-panel" id="card-langs">
+                    <div class="metric-icon">💻</div>
+                    <div class="metric-info">
+                        <h3>Diversidad Técnica</h3>
+                        <div class="metric-points"><span id="ptsLangs">0</span> / 2000 pts</div>
+                        <div class="metric-bar"><div class="metric-fill" id="fillLangs"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Body -->
+            <div class="dashboard-body">
+                <!-- Data Visualization -->
+                <section class="chart-section glass-panel">
+                    <h3>Distribución de Lenguajes</h3>
+                    <div class="chart-container">
+                        <canvas id="languageChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Repositories List -->
+                <section class="repos-section glass-panel">
+                    <div class="section-header">
+                        <h3>Top Repositorios</h3>
+                        <span class="repo-count" id="repoCountLabel">0 encontrados</span>
+                    </div>
+                    <div class="repos-list" id="reposList">
+                        <!-- Repositories injected by JS -->
+                        <div class="loading-pulse">Cargando repositorios desde la Forja...</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Application Logic -->
+    <script src="js/api.js"></script>
+    <script src="js/evaluator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
