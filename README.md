@@ -1,25 +1,25 @@
 # ⚒ FORGE
 
-**Centro de control y evaluación algorítmica para el ecosistema de repositorios de GitHub.**
+**Algorithmic evaluation and control nexus for the GitHub repository ecosystem.**
 
-FORGE es un Web Dashboard interactivo y autónomo diseñado como herramienta interna para evaluar, puntuar y descubrir áreas de optimización en los repositorios de GitHub.
+FORGE operates as an interactive, autonomous Web Dashboard engineered as an internal telemetry tool to evaluate, score, and surface optimization vectors across GitHub repositories.
 
-## 🚀 Características
+## 🚀 Features
 
-- **Evaluación en Tiempo Real**: Calcula una puntuación algorítmica (de 1 a 10000) basada en la popularidad, la actividad y la integridad de los metadatos de los repositorios.
-- **Detección de Fricción**: Sistema de alertas automáticas que identifica qué proyectos carecen de documentación (README), descripciones o etiquetas (Topics).
-- **Interfaz Premium**: Diseño basado en Glassmorphism, animaciones fluidas y modo oscuro, enfocado en mostrar información compleja de forma visual y accesible.
+- **Real-Time Evaluation**: Computes an algorithmic score (1 to 10000) derived from repository popularity, kinetic activity, and metadata integrity.
+- **Friction Detection**: Automated alert matrix identifying repositories lacking documentation (README), descriptions, or taxonomic tags (Topics).
+- **Premium Interface**: Glassmorphism-based architecture, fluid micro-animations, and strict dark mode, engineered to render complex telemetry highly visual and accessible.
 
-## 📦 Tecnologías
+## 📦 Technologies
 
-- **Estructura**: HTML5 Semántico
-- **Estilos**: CSS3 Vanilla (Variables CSS, Flexbox/Grid, Animaciones SVG)
-- **Lógica**: JavaScript (ES6+), Fetch API (GitHub REST API)
-- **Visualización**: Chart.js
+- **Structure**: Semantic HTML5
+- **Styles**: Vanilla CSS3 (CSS Variables, Flexbox/Grid, SVG Animations)
+- **Logic**: JavaScript (ES6+), Fetch API (GitHub REST API)
+- **Visualization**: Chart.js
 
-## ⚙️ Uso Interno
+## ⚙️ Internal Usage
 
-Este proyecto está diseñado para funcionar sin necesidad de frameworks de compilación pesados. Para visualizar el dashboard, basta con servir el archivo `index.html` mediante un servidor local o directamente a través de GitHub Pages.
+This architecture is designed for zero-friction deployment, bypassing heavy compilation frameworks. To execute the dashboard, deploy the `index.html` payload via a local server or directly through GitHub Pages.
 
 ---
-*FORGE fue diseñado y construido de forma autónoma.*
+*FORGE was autonomously designed and constructed.*
